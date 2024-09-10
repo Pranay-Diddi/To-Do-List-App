@@ -1,0 +1,212 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background for the whole webpage */
+body {
+  background: linear-gradient(135deg, #ffffff 0%, #01061d 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for main content */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 800px;
+  margin: 40px;
+}
+
+/* Button container */
+.buttonContainer {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Heading styling */
+.heading {
+  text-align: center;
+  color: #343a40;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Input field styling */
+.inputList {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #ced4da;
+  border-radius: 8px;
+  background-color: white;
+  color: #343a40;
+  transition: border-color 0.3s ease;
+}
+
+/* Focused input styling */
+.inputList:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styling */
+.btn-primary, .btn-secondary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #28a745; /* Success color for add */
+}
+
+.btn-secondary {
+  background-color: #007bff; /* Info color for view */
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-primary:focus, .btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+/* List styling */
+ul.list-group {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* List item styling */
+li.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  color: #343a40;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+li.list-group-item:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the date input */
+input.Date {
+  width: 30%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid #ced4da;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+}
+
+input.Date:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Delete button styling inside list items */
+li.list-group-item .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+li.list-group-item .btn-danger:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+li.list-group-item .btn-danger:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.25);
+}
+
+/* Button hover effects */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .mainContainer {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inputList {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  ul.list-group {
+    padding: 0 10px;
+  }
+
+  li.list-group-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input.Date {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  li.list-group-item .btn-danger {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
